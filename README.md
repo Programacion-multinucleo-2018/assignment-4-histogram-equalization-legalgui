@@ -24,3 +24,9 @@ Rubric:
 5. For the GPU version, used shared memory where necessary.
 6. Both images are displayed at the end.
 7. Calculation times and speedup obtained are incuded in the Readme.
+
+GPU Time: For the GPU Time calculus, only the kernels execution times were measured. The reason for this is that memory access for this implemention is basically constant, while the computation complexities of the equalization kernels are more interesting. Measuring the whole process would be counter-productive because the execution times are so fast that memory allocation would basically slow down the process relatively a lot. Of course, this slow-down becomes marginal as the size of the picture, color bin and channels grow, but in this scenario, it absorbs all the speed-up performance.
+
+CPU Average Time for dog3.jpeg and 256 bin: 88.115311 (ms)
+GPU Average Time for dog3.jpeg and 256 bin: 0.044217 (ms) 4 kernels. 
+Speed Up: x1992.7926
